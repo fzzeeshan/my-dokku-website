@@ -22,11 +22,10 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install  # Change this to your build script if needed
+      
       - name: Build website
-        working-directory: my-dokku-website
-        run: |
-          yarn build
+        run: npm run build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
